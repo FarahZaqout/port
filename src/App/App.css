@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+@font-face {
+  font-family: 'league-spartan';
+  src: url("../../fonts/leaguespartan-bold.woff") format("woff");
+  font-weight: 600, 400;
+  font-style: normal; }
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(100%); } }
+
+@keyframes slideInWithFade {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; }
+  90% {
+    transform: translateX(-2%);
+    opacity: 0.01; }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes greet {
+  0% {
+    font-size: 20rem; }
+  100% {
+    font-size: 10rem; } }
+
+@keyframes greetSmall {
+  0% {
+    font-size: 10rem; }
+  100% {
+    font-size: 6rem; } }
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  20% {
+    opacity: 0;
+    transform: translateY(-80%); }
+  21% {
+    opacity: 1;
+    transform: translateY(-79%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes reveal {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%;
+  font-size: 10px;
+  background-color: #24252c;
+  color: #eee;
+  transition: all 0.6s; }
+
+html[data-theme="--light"] {
+  background-color: #f3f3f3;
+  color: #5a5c72;
+  transition: all 0.6s; }
+
+body {
+  height: 100%; }
+
+.cover {
+  background-position: 0 100%;
+  background-color: #f8c829;
+  height: 100vh;
+  animation: 1s slideOut 1s, greet 1s;
+  animation-fill-mode: forwards;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'league-spartan'; }
+
+.hidden {
+  display: none; }
+
+.app {
+  background-position: -100% 0;
+  transition: 1s background-position;
+  height: 100%; }
+
+@media only screen and (max-width: 1080px) {
+  html {
+    font-size: 9px; } }
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 8px; }
+  .cover {
+    font-size: 7rem;
+    animation: 1s slideOut 1s, greetSmall 1s; } }
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  html {
+    font-size: 6px; }
+  .cover {
+    font-size: 3rem;
+    animation: 1s slideOut 1s, greetSmall 1s; } }
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 4.3px; }
+  .cover {
+    animation: 1s slideOut 1s, greetSmall 1s; } }
+
+.app__header {
+  height: 95vh; }
+
+.about-box__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 28rem; }
+
+.about-box--dark {
+  color: #eee;
+  height: 25rem;
+  padding: 0 0 0 34rem;
+  display: block; }
+  .about-box--dark h2 {
+    font-family: 'league-spartan';
+    font-size: 7rem; }
+  .about-box--dark p {
+    font-size: 2.4rem;
+    font-style: italic;
+    margin-bottom: 5rem; }
+
+.about-box__button--dark {
+  font-family: 'league-spartan';
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
+  border: 0.1rem solid #eee;
+  color: #eee;
+  padding: 1.4rem 3.2rem;
+  transition: all 1s; }
+  .about-box__button--dark:hover {
+    color: #272727;
+    border: 0.1rem #272727;
+    background: #eee;
+    transition: all 1s; }
+
+.social-links--dark {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  padding-right: 4rem; }
+  .social-links--dark a:link, .social-links--dark a:visited {
+    margin: 1rem;
+    text-decoration: none;
+    color: #eee;
+    font-size: 2rem; }
+
+.social-links__icon--dark {
+  width: 7rem;
+  height: 6rem; }
+  .social-links__icon--dark path {
+    fill: #b3aeae;
+    transition: fill 0.3s; }
+  .social-links__icon--dark:hover path {
+    fill: #f3f3f3;
+    transition: fill 0.3s; }
+
+.about-box__aniamted-h2 {
+  animation: 2.5s reveal 1.7s; }
+
+.about-box__animated-p {
+  animation: 2.6s slideInWithFade; }
+
+.social-links--animated {
+  animation: slideFromRight 1s 1.7s; }
+
+@media only screen and (max-width: 320px) {
+  .about-box--dark {
+    padding: 0 0 0 12rem;
+    margin-top: 0; } }
+
+@media only screen and (max-width: 1080px) {
+  .about-box--dark {
+    padding: 0 0 0 15rem;
+    margin-top: 0; } }
+
+.about-box__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.about-box--light {
+  color: inherit;
+  height: 25rem;
+  padding: 0 0 0 34rem;
+  display: block; }
+  .about-box--light h2 {
+    font-family: 'league-spartan';
+    font-size: 7rem; }
+  .about-box--light p {
+    font-size: 2.4rem;
+    font-style: italic;
+    margin-bottom: 5rem; }
+
+.about-box__button--light {
+  font-family: 'league-spartan';
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
+  border: 0.1rem solid #656c88;
+  color: #656c88;
+  padding: 1.4rem 3.2rem;
+  transition: all 1s; }
+  .about-box__button--light:hover {
+    color: #eee;
+    border: 0.1rem #eee;
+    background: #656c88;
+    transition: all 1s; }
+
+.social-links--light {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  padding-right: 4rem; }
+  .social-links--light a:link, .social-links--light a:visited {
+    margin: 1rem;
+    text-decoration: none;
+    color: #eee;
+    font-size: 2rem; }
+
+.social-links__icon--light {
+  width: 7rem;
+  height: 6rem; }
+  .social-links__icon--light path {
+    fill: #5a5c72;
+    transition: fill 0.3s; }
+  .social-links__icon--light:hover path {
+    fill: #2e2e2f;
+    transition: fill 0.3s; }
+
+@media only screen and (max-width: 320px) {
+  .about-box--light {
+    padding: 0 0 0 12rem;
+    margin-top: 0; } }
+
+@media only screen and (max-width: 1080px) {
+  .about-box--light {
+    padding: 0 0 0 15rem;
+    margin-top: 0; } }
+
+.navbar--dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.9rem;
+  height: 8rem;
+  flex-direction: row-reverse; }
+  .navbar--dark div {
+    padding-right: 3rem;
+    margin-right: 15rem; }
+  .navbar--dark a:visited, .navbar--dark a:link {
+    font-family: 'league-spartan';
+    color: #b3aeae;
+    text-decoration: none;
+    position: relative;
+    margin: 1.3rem;
+    transition: color 0.3s; }
+    .navbar--dark a:visited:hover, .navbar--dark a:link:hover {
+      color: white;
+      transition: color 0.3s; }
+  .navbar--dark a:after, .navbar--dark a:visited:after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: #eee;
+    transition: 0.3s; }
+  .navbar--dark a:hover:after, .navbar--dark a:visited:hover:after {
+    width: 100%; }
+
+.fa-adjust--dark {
+  color: #b3aeae;
+  transition: color 0.3s; }
+  .fa-adjust--dark:hover {
+    color: white;
+    transition: color 0.3s; }
+
+.navbar--animated {
+  animation: slideFromTop 1s 1.7s; }
+
+.navbar--light {
+  display: flex;
+  color: #5b5f81;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.9rem;
+  height: 8rem;
+  flex-direction: row-reverse; }
+  .navbar--light div {
+    padding-right: 3rem;
+    margin-right: 15rem; }
+  .navbar--light a:visited, .navbar--light a:link {
+    font-family: 'league-spartan';
+    color: #5b5f81;
+    text-decoration: none;
+    margin: 1.3rem;
+    transition: color 0.3s;
+    position: relative; }
+    .navbar--light a:visited:hover, .navbar--light a:link:hover {
+      color: #454758;
+      transition: color 0.3s; }
+  .navbar--light a:after, .navbar--light a:visited:after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: #454758;
+    transition: 0.3s; }
+  .navbar--light a:hover:after, .navbar--light a:visited:hover:after {
+    width: 100%; }
+
+.fa-adjust--light {
+  color: #5b5f81;
+  transition: color 0.3s; }
+  .fa-adjust--light:hover {
+    color: #454758;
+    transition: color 0.3s; }

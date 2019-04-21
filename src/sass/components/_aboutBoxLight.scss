@@ -1,0 +1,83 @@
+.about-box__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-box--light {
+  color: inherit;
+  height: 25rem;
+  padding: 0 0 0 34rem;
+  display: block;
+  // H2 CHILD
+  h2 {
+    font-family: 'league-spartan';
+    font-size: 7rem;
+  }
+  // P CHILD
+  p {
+    font-size: 2.4rem;
+    font-style: italic;
+    margin-bottom: 5rem;
+  }
+}
+
+.about-box__button--light {
+  font-family: 'league-spartan';
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
+  border: 0.1rem solid #656c88;
+  color: #656c88;
+  padding: 1.4rem 3.2rem;
+  transition: all 1s;
+
+  &:hover {
+    color: #eee;
+    border: 0.1rem $dark-font;
+    background: #656c88;
+    transition: all 1s;
+  }
+}
+
+.social-links--light {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  padding-right: 4rem;
+  a:link, a:visited {
+    margin: 1rem;
+    text-decoration: none;
+    color: #eee;
+    font-size: 2rem;
+  }
+}
+
+.social-links__icon--light {
+  width: 7rem;
+  height: 6rem;
+  path {
+    fill: $light-font;
+    transition: fill 0.3s;
+  }
+  &:hover {
+    path {
+      fill: $light-theme-hovered;
+      transition: fill 0.3s;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .about-box--light {
+    padding: 0 0 0 12rem;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .about-box--light {
+    padding: 0 0 0 15rem;
+    margin-top: 0;
+  }
+}

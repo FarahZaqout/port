@@ -1,0 +1,56 @@
+$main-gray: #b3aeae;
+
+.navbar--dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.9rem;
+  height: 8rem;
+  flex-direction: row-reverse;
+  // NAVBAR LINK CONTAINER
+  div {
+    padding-right: 3rem;
+    margin-right: 15rem;
+  }
+  a:visited, a:link {
+    font-family: 'league-spartan';
+    color: $main-gray;
+    text-decoration: none;
+    position: relative;
+    margin: 1.3rem;
+    transition: color 0.3s;
+    &:hover {
+      color: white;
+      transition: color 0.3s;
+    }
+  }
+
+  // SLINDING UNDERLINE
+  a:after, a:visited:after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: #eee;
+    transition: 0.3s;
+  }
+  a:hover:after, a:visited:hover:after {
+    width: 100%;
+  }
+}
+
+.fa-adjust--dark {
+  color: $main-gray;
+  transition: color 0.3s;
+  &:hover {
+  color: white;
+  transition: color 0.3s;
+  }
+}
+
+// ANIMATION
+.navbar--animated {
+  animation: slideFromTop 1s 1.7s;
+}

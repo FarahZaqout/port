@@ -1,0 +1,100 @@
+// DARK THEME
+$dark-font: #eee;
+$dark-background: #24252c;
+$dark-theme-hovered: #f3f3f3;
+
+// LIGHT THEME
+$light-background: #f3f3f3;
+$light-font: #5a5c72;
+$light-theme-hovered: #2e2e2f;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 10px;
+  background-color: $dark-background;
+  color: $dark-font;
+  transition: all 0.6s;
+}
+
+html[data-theme="--light"] {
+  background-color: $light-background;
+  color: $light-font;
+  transition: all 0.6s;
+
+}
+
+body {
+  height: 100%;
+}
+
+.cover {
+  background-position: 0 100%;
+  background-color: rgb(248, 200, 41);
+  height: 100vh;
+  animation: 1s slideOut 1s, greet 1s;
+  animation-fill-mode: forwards;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'league-spartan';
+}
+
+.hidden {
+  display: none;
+}
+
+.app {
+  background-position: -100% 0;
+  transition: 1s background-position;
+  height: 100%;
+}
+
+
+// PHONE
+@media only screen and (max-width: 1080px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 8px;
+  }
+
+  .cover {
+    font-size: 7rem;
+    animation: 1s slideOut 1s, greetSmall 1s;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  html {
+    font-size: 6px;
+  }
+  .cover {
+    font-size: 3rem;
+    animation: 1s slideOut 1s, greetSmall 1s;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 4.3px;
+  }
+  .cover {
+    animation: 1s slideOut 1s, greetSmall 1s;
+  }
+}
+
+.app__header {
+  height: 95vh;
+}
+
+

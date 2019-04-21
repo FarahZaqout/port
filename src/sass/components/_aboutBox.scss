@@ -1,0 +1,97 @@
+.about-box__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 28rem;
+}
+
+.about-box--dark {
+  color: $dark-font;
+  height: 25rem;
+  padding: 0 0 0 34rem;
+  display: block;
+  // H2 CHILD
+  h2 {
+    font-family: 'league-spartan';
+    font-size: 7rem;
+  }
+  // P CHILD
+  p {
+    font-size: 2.4rem;
+    font-style: italic;
+    margin-bottom: 5rem;
+  }
+}
+
+.about-box__button--dark {
+  font-family: 'league-spartan';
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
+  border: 0.1rem solid #eee;
+  color: $dark-font;
+  padding: 1.4rem 3.2rem;
+  transition: all 1s;
+
+  &:hover {
+    color: #272727;
+    border: 0.1rem #272727;
+    background: #eee;
+    transition: all 1s;
+  }
+}
+
+.social-links--dark {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  padding-right: 4rem;
+  a:link, a:visited {
+    margin: 1rem;
+    text-decoration: none;
+    color: #eee;
+    font-size: 2rem;
+  }
+}
+
+.social-links__icon--dark {
+  width: 7rem;
+  height: 6rem;
+  path {
+    fill: #b3aeae;
+    transition: fill 0.3s;
+  }
+  &:hover {
+    path {
+      fill: $dark-theme-hovered;
+      transition: fill 0.3s;
+    }
+  }
+}
+
+// ANIMATION CLASSES
+.about-box__aniamted-h2 {
+  animation: 2.5s reveal 1.7s;
+}
+
+.about-box__animated-p {
+  animation: 2.6s slideInWithFade;
+}
+
+.social-links--animated {
+  animation: slideFromRight 1s 1.7s;
+}
+
+@media only screen and (max-width: 320px) {
+  .about-box--dark {
+    padding: 0 0 0 12rem;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .about-box--dark {
+    padding: 0 0 0 15rem;
+    margin-top: 0;
+  }
+}
