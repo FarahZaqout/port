@@ -47,7 +47,10 @@ module.exports = {
   plugins: [
     new CleanWebpack(),
     new HtmlPlugin({
-      title: 'Missile Command'
+      title: 'Missile Command',
+      meta: {
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+      }
     }),
     new RootPlugin()
   ]

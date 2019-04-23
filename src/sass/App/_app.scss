@@ -8,6 +8,14 @@ $light-background: #f3f3f3;
 $light-font: #5a5c72;
 $light-theme-hovered: #2e2e2f;
 
+
+// CHOLIRA THEME
+$cholira-theme-background:  #f5aa0a;
+$cholira-theme-black: #272727;
+$cholira-theme-white: #eee;
+$cholira-theme-gray: #404040;
+
+
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +42,7 @@ body {
 
 .cover {
   background-position: 0 100%;
-  background-color: rgb(248, 200, 41);
+  background-color: $cholira-theme-background;
   height: 100vh;
   animation: 1s slideOut 1s, greet 1s;
   animation-fill-mode: forwards;
@@ -57,6 +65,16 @@ body {
 
 
 // PHONE
+@media only screen and (max-width: 3000px) {
+  html {
+    font-size: 9px;
+  }
+  .app__header {
+    height: 100vh;
+    position: relative;
+  }
+}
+
 @media only screen and (max-width: 1080px) {
   html {
     font-size: 9px;
@@ -92,9 +110,4 @@ body {
     animation: 1s slideOut 1s, greetSmall 1s;
   }
 }
-
-.app__header {
-  height: 95vh;
-}
-
 

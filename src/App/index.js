@@ -2,7 +2,8 @@
 import React, { Component, Fragment } from 'react'
 import './App.css'
 import Navbar from '../components/Navbar'
-import AboutBox from '../components/AboutBox';
+import AboutBox from '../components/AboutBox'
+import Work from '../components/Work'
 
 export default class App extends Component {
   constructor(props) {
@@ -43,10 +44,14 @@ export default class App extends Component {
         <div className={`${isDivHidden ? 'cover hidden' : 'cover'}`}>
           <h2>WELCOME</h2>
         </div>
-        <div className="app__header">
+        { isDivHidden && <Fragment> 
+        <div className={`app__header`}>
           <Navbar adjust={this.changeTheme} theme={theme} />
           <AboutBox theme={theme} />
         </div>
+        <Work />
+        </Fragment>
+          }
       </Fragment>
     )
   }

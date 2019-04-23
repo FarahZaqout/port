@@ -6,6 +6,8 @@
 }
 
 .about-box--dark {
+  // display: flex;
+  // flex-direction: column;
   color: $dark-font;
   height: 25rem;
   padding: 0 0 0 34rem;
@@ -71,15 +73,15 @@
 
 // ANIMATION CLASSES
 .about-box__aniamted-h2 {
-  animation: 2.5s reveal 1.7s;
+  animation: 2.5s reveal;
 }
 
 .about-box__animated-p {
-  animation: 2.6s slideInWithFade;
+  animation: 1s slideInWithFade;
 }
 
 .social-links--animated {
-  animation: slideFromRight 1s 1.7s;
+  animation: slideFromRight 1s;
 }
 
 @media only screen and (max-width: 320px) {

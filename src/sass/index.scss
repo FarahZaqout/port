@@ -19,13 +19,10 @@
 
 @keyframes slideInWithFade {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-5%);
     opacity: 0;
   }
-  90% {
-    transform: translateX(-2%);
-    opacity: 0.01;
-  }
+
   100% {
     transform: translateX(0)
   }
@@ -88,6 +85,18 @@
   }
 }
 
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 // GOOGLE FONTS
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
@@ -98,3 +107,4 @@
 @import "components/_aboutBoxLight";
 @import "components/_navbar";
 @import "components/_navbarLight";
+@import "components/work";

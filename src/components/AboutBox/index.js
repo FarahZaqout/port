@@ -12,7 +12,7 @@ export default function AboutBox(props) {
           Creating elegant, robust &amp; responsive web applications.
         </p>
         <Router>
-          <Link className={`about-box__button${theme}`} to="/x">ABOUT ME</Link>
+          <Link className={`about-box__button${theme}`} to="/">ABOUT ME</Link>
         </Router>
       </div>
       <div className={`social-links${theme} social-links--animated`}>

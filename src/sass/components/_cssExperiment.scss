@@ -1,0 +1,17 @@
+.gradient-animation {
+  height: 90vh;
+  width: 100vw;
+  background: linear-gradient(-45deg, rgb(73, 92, 79), rgb(169, 180, 158), #5d727a, #5a5c72);
+  animation: animateGradient 15s infinite, slideUp 1s;
+  background-size: 400% 400%;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+
+}
