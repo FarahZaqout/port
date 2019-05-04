@@ -7,7 +7,10 @@
     "compile:sass": "node-sass ./src/sass/index.scss src/App/App.css",
     "watch:sass": "node-sass ./src/sass/index.scss src/App/App.css -w",
     "start": "node-sass ./src/sass/index.scss src/App/App.css && webpack-dev-server --open",
-    "build": "node-sass ./src/sass/index.scss src/App/App.css && webpack --watch"
+    "build": "node-sass ./src/sass/index.scss src/App/App.css && webpack --watch",
+    "homepage": "https://github.com/FarahZaqout/port/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -38,5 +41,7 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
