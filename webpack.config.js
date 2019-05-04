@@ -38,7 +38,7 @@ module.exports = {
     ] // END OF RULES ARRAY
   },
   devServer: {
-    contentBase: './dist/'
+    contentBase: './docs/'
   },
   output: {
     filename: 'bundle.js',
