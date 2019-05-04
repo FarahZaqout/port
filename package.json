@@ -7,9 +7,9 @@
     "compile:sass": "node-sass ./src/sass/index.scss src/App/App.css",
     "watch:sass": "node-sass ./src/sass/index.scss src/App/App.css -w",
     "start": "node-sass ./src/sass/index.scss src/App/App.css && webpack-dev-server --open",
-    "build": "node-sass ./src/sass/index.scss src/App/App.css && webpack --watch",
+    "build": "node-sass ./src/sass/index.scss src/App/App.css && webpack",
     "homepage": "https://github.com/FarahZaqout/port/",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && xcopy dist docs /E",
     "deploy": "gh-pages -d build"
   },
   "keywords": [],
